@@ -1,6 +1,3 @@
-# Main CSV has this many fields, we will try to extract important data which we can find
-# from certificates and add those to CSV
-
 import PyPDF2 as pdf
 import glob
 import os
@@ -44,7 +41,7 @@ for things in range(number_of_files):
     if a < 100:
         page_info = page_info.replace('\n', " ").strip(' ')
         usless, *table = page_info.split(" ")
-        
+
 #         This unnessary data which we captured, need to dump it out
         to_remove = ('laboratory', 'description', 'grown',
                      'diamond', 'and', 'laserscribe', 'to', 'whom', 'it', 'may', 'concern', ' ', '', 'shape')
